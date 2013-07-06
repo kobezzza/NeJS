@@ -3,7 +3,7 @@
  */
 
 var NeJS = {
-	VERSION: '0.0.2',
+	VERSION: '0.0.4',
 	quotContent: []
 };
 
@@ -117,7 +117,7 @@ NeJS.compile = function (src) {
 						s + '\t' + paramName + '[_i] = arguments[_i + ' + i + '];' +
 					s + '}';
 
-				sstr = sstr.replace(new RegExp('(?:,|\\()\\s*' + el.replace(restRgxp, '\\.\\.\\.') + '\\s*'), '');
+				sstr = sstr.replace(new RegExp('(?:,|)\\s*' + el.replace(restRgxp, '\\.\\.\\.') + '\\s*'), '');
 
 			// Параметры по умолчанию
 			} else if (defRgxp.test(el)) {
