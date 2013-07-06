@@ -12,7 +12,7 @@ Program
 var fs = require('fs');
 var file = Program.source;
 var newFile = Program.output || (file + '.js');
-var defs = require(defs);
+var defs = require('defs');
 
 fs.readFile(file, function (err, data) {
 	if (err) {
