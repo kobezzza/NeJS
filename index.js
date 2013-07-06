@@ -30,10 +30,9 @@ fs.readFile(file, function (err, data) {
 			process.exit(res.exitcode);
 		}
 
-		if (res.stats) {
+		/*if (res.stats) {
 			console.log(res.stats.toString());
-			process.exit(0);
-		}
+		}*/
 
 		if (res.ast) {
 			console.log(JSON.stringify(res.ast, null, 4));
