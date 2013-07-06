@@ -1,8 +1,38 @@
 {
   "name": "nejs",
   "version": "0.0.1",
+  "description": "NeJS - транслятор ECMAScript6 в ECMAScript3",
+  "main": "nejs.js",
+  "bin": {
+    "nejs": "index.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
   "dependencies": {
     "commander": "~1.2.0",
-    "jossy": "~0.0.2"
+    "jossy": "~0.0.2",
+    "defs": "~0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kobezzza/NeJS"
+  },
+  "keywords": [
+    "ecmascript6"
+  ],
+  "author": {
+    "name": "Kobezzza",
+    "email": "kobezzza@mail.ru",
+    "url": "https://github.com/Kobezzza"
+  },
+  "license": "BSD",
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/kobezzza/NeJS/issues"
   }
 }

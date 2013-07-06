@@ -23,7 +23,26 @@ fs.readFile(file, function (err, data) {
 				console.log(err);
 
 			} else {
-				console.log('File "' + file + '" has been successfully compiled (' + newFile + ').');
+				var defs = require('child_process').spawn('node', [
+					'--harmony',
+					__dirname + '/node_modules/defs/defs',
+					newFile
+				]);
+
+				defs.stderr.on('data', function (data) {
+					throw data;
+				});
+
+				defs.stdout.on('data', function (data) {
+					fs.writeFile(newFile, data, function (err) {
+						if (err) {
+							console.log(err);
+
+						} else {
+							console.log('File "' + file + '" has been successfully compiled (' + newFile + ').');
+						}
+					});
+				});
 			}
 		});
 	}
