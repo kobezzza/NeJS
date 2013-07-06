@@ -1,6 +1,0 @@
-{
-    "environments": ["node", "browser"],
-    "disallowVars": false,
-    "disallowDuplicated": false,
-    "disallowUnknownReferences": false
-}
