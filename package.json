@@ -1,6 +1,6 @@
 {
   "name": "nejs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "NeJS - транслятор ECMAScript6 в ECMAScript3",
   "main": "nejs.js",
   "bin": {
