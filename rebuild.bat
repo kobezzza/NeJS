@@ -1,1 +1,0 @@
-call jossy ./lib/core.js > nejs.js
