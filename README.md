@@ -4,7 +4,9 @@ ECMAScript6 to ECMAScript3 compiler
 
 ##Synopsis
 * let, const delclaration (defs.js)
-* arrow functions:
+* arrow functions
+
+Examples:
 
     () => ...
     param => ...
@@ -13,19 +15,25 @@ ECMAScript6 to ECMAScript3 compiler
         return ...
     }
 
-* rest parameters:
+* rest parameters
+
+Examples:
 
     function foo(a, b, ...other) {
         ...
     }
 
-* default parameters:
+* default parameters
+
+Examples:
 
     function foo(a, b = 1) {
 
     }
 
-* named parameters:
+* named parameters
+
+Examples:
 
     function foo({name, body: lastName}) {
         console.log(name);
