@@ -4,7 +4,7 @@ var NeJS = require('./nejs');
 var Program = require('commander');
 
 Program
-	.version('0.0.8')
+	.version('0.1.0')
 	.option('-s, --source [src]', 'source file')
 	.option('-o, --output [src]', 'output file')
 	.parse(process.argv);
