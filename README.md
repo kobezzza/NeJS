@@ -28,7 +28,7 @@ Examples:
 Examples:
 
     function foo(a, b = 1) {
-
+        ...
     }
 
 * named parameters
