@@ -4,7 +4,7 @@ var NeJS = require('./nejs');
 var Program = require('commander');
 
 Program
-	.version('0.0.7')
+	.version('0.0.8')
 	.option('-s, --source [src]', 'source file')
 	.option('-o, --output [src]', 'output file')
 	.parse(process.argv);
@@ -26,8 +26,10 @@ fs.readFile(file, function (err, data) {
 			"disallowUnknownReferences": false
 		});
 
-		if (res.exitcode !== 0) {
-			process.exit(res.exitcode);
+		if (res.errors) {
+			process.stderr.write(res.errors.join("\n"));
+			process.stderr.write("\n");
+			process.exit(-1);
 		}
 
 		/*if (res.stats) {
