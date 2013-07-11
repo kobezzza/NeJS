@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "commander": ">1.2.0",
-    "defs": ">0.4.0"
+    "defs": ">0.3.0"
   },
   "devDependencies": {},
   "scripts": {
