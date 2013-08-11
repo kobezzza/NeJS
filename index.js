@@ -4,15 +4,23 @@ var NeJS = require('./nejs');
 var Program = require('commander');
 
 Program
-	.version('0.1.5')
+	.version(NeJS.VERSION)
 	.option('-s, --source [src]', 'source file')
 	.option('-o, --output [src]', 'output file')
+	.option('-m, --smart', 'smart compile')
 	.parse(process.argv);
 
 var fs = require('fs');
+var path = require('path');
+
 var file = Program.source;
 var newFile = Program.output || (file + '.js');
 var defs = require('defs');
+
+if ((!Program.output || Program.output === file) && Program.smart && path.extname(file) === '.js') {
+	console.error('Invalid output src!');
+	process.exit(-1);
+}
 
 fs.readFile(file, function (err, data) {
 	if (err) {
@@ -31,10 +39,6 @@ fs.readFile(file, function (err, data) {
 			console.error("\n");
 			process.exit(-1);
 		}
-
-		/*if (res.stats) {
-			console.log(res.stats.toString());
-		}*/
 
 		if (res.ast) {
 			console.log(JSON.stringify(res.ast, null, 4));

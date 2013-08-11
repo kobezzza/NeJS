@@ -3,15 +3,14 @@
  */
 
 var NeJS = {
-	VERSION: '0.1.5',
+	VERSION: '0.1.6',
 	quotContent: []
 };
 
 var compiler = require('./lib/compiler');
-var escape = require('./lib/escape');
+var Escaper = require('escaper');
 
 NeJS.compile = compiler.compile;
-NeJS.replaceDangerBlocks = escape.replaceDangerBlocks;
-NeJS.pasteDangerBlocks = escape.pasteDangerBlocks;
+NeJS.Escaper = Escaper;
 
 module.exports = NeJS;
