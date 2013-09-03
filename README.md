@@ -2,6 +2,10 @@
 
 ECMAScript6 to ECMAScript3 compiler
 
+##Usage
+    npm install -g nejs
+    nejs -s <source> -o <output>
+
 ##Synopsis
 * let, const delclaration ([defs.js](https://github.com/olov/defs))
 * arrow functions
@@ -41,7 +45,3 @@ Examples:
     }
 
     foo({name: 'Foo', body: 'Bar'});
-
-##Usage
-    npm install -g nejs
-    nejs -s <source> -o <output>
