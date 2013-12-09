@@ -27,7 +27,13 @@ fs.readFile(file, function (err, data) {
 		console.log(err);
 
 	} else {
-		var res = defs(NeJS.compile(String(data)), {
+		var ShaBang = '';
+		data = String(data).replace(/^\/\/(#!\/.*\s+)/, function (sstr, $1) {
+			ShaBang = $1;
+			return '';
+		});
+
+		var res = defs(NeJS.compile(data), {
 			"environments": ["node", "browser"],
 			"disallowVars": false,
 			"disallowDuplicated": false,
@@ -44,6 +50,7 @@ fs.readFile(file, function (err, data) {
 			console.log(JSON.stringify(res.ast, null, 4));
 		}
 
+		res.src = ShaBang + res.src;
 		fs.writeFile(newFile, res.src, function (err) {
 			if (err) {
 				console.log(err);
