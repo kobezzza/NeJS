@@ -45,8 +45,3 @@ Examples:
     }
 
     foo({name: 'Foo', body: 'Bar'});
-
-Sha-Bang support:
-
-    //#!/usr/bin/env node --harmony
-    => #!/usr/bin/env node --harmony

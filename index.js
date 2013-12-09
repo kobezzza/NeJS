@@ -28,7 +28,7 @@ fs.readFile(file, function (err, data) {
 
 	} else {
 		var ShaBang = '';
-		data = String(data).replace(/^\/\/(#!\/.*\s+)/, function (sstr, $1) {
+		data = String(data).replace(/^(#!\/.*\s+)/, function (sstr, $1) {
 			ShaBang = $1;
 			return '';
 		});
