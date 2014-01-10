@@ -1,7 +1,7 @@
 {
   "name": "nejs",
   "version": "0.1.9",
-  "description": "ECMAScript6 to ECMAScript3 compiler",
+  "description": "ECMAScript 6 to ECMAScript 3 compiler",
   "main": "nejs.js",
   "bin": {
     "nejs": "index.js"
@@ -26,7 +26,7 @@
     "ecmascript6"
   ],
   "author": "Kobezzza <kobezzza@mail.ru> (https://github.com/Kobezzza)",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kobezzza/NeJS/issues"
   },
