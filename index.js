@@ -2,14 +2,14 @@
 
 /**!
  * @status stable
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 var NeJS = require('./nejs');
 var Program = require('commander');
 
 Program
-	.version(NeJS.VERSION)
+	.version(NeJS.VERSION.join('.'))
 	.option('-i, --input [src]', 'input text')
 	.option('-s, --source [src]', 'source file')
 	.option('-o, --output [src]', 'output file')
