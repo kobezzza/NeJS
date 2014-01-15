@@ -2,7 +2,7 @@
 
 /**!
  * @status stable
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 var NeJS = require('./nejs');
@@ -10,20 +10,25 @@ var Program = require('commander');
 
 Program
 	.version(NeJS.VERSION.join('.'))
-	.option('-i, --input [src]', 'input text')
 	.option('-s, --source [src]', 'source file')
 	.option('-o, --output [src]', 'output file')
 	.option('-c, --smart', 'smart compile')
 	.parse(process.argv);
 
-if (!Program.input && !Program.source) {
+var input;
+
+if (!Program.source) {
+	input = process.argv[2];
+}
+
+if (!input && !Program.source) {
 	Program.help();
 }
 
 var fs = require('fs');
 var path = require('path');
 
-var text = Program.input || String(fs.readFileSync(Program.source));
+var text = Program.source ? String(fs.readFileSync(Program.source)) : input;
 
 var file = Program.source;
 var newFile = Program.output || (file ? file + '.js' : '');
