@@ -1,10 +1,5 @@
 #!/usr/bin/env node --harmony
 
-/**!
- * @status stable
- * @version 1.0.2
- */
-
 var NeJS = require('./nejs');
 var Program = require('commander');
 

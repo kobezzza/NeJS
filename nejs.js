@@ -1,7 +1,5 @@
 /*!
  * Исключительно кривой транслятор ECMAScript6 в ECMAScript3
- * @status stable
- * @version 1.0.0
  */
 
 var NeJS = {
