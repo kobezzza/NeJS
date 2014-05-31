@@ -8,9 +8,10 @@ Use [es6-transpiler](https://github.com/termi/es6-transpiler)
 
 ## Usage
 
-	npm install -g nejs
-
-	nejs -s <source> -o <output>
+```bash
+npm install -g nejs
+nejs -s <source> -o <output>
+```
 
 ## Synopsis
 
