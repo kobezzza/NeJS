@@ -1,6 +1,6 @@
 {
   "name": "nejs",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "ECMAScript 6 to ECMAScript 3 compiler",
   "main": "nejs.js",
   "bin": {
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "escaper": "*",
-    "commander": "~1.3",
+    "commander": "~2",
     "defs": "~0.4"
   },
   "devDependencies": {},
