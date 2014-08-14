@@ -11,6 +11,7 @@ var fs = require('fs'),
 
 program
 	.version(nejs.VERSION.join('.'))
+	.usage('[options] [dir|file ...]')
 
 	.option('-s, --source [src]', 'source file')
 	.option('-o, --output [src]', 'output file')
