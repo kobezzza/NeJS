@@ -2,7 +2,7 @@
 
 ECMAScript 6 to ECMAScript 3 compiler
 
-**Deprecated**
+## Deprecated
 
 Use [es6-transpiler](https://github.com/termi/es6-transpiler)
 
@@ -66,7 +66,7 @@ foo({name: 'Foo', body: 'Bar'});
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Andrey Kobets (Kobezzza)
+Copyright (c) 2014 Andrey Kobets (Kobezzza) <kobezzza@mail.ru>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
