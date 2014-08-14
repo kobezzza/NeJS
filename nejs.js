@@ -3,7 +3,7 @@
  */
 
 var NeJS = {
-	VERSION: [0, 1, 9],
+	VERSION: [0, 1, 11],
 	quotContent: []
 };
 
