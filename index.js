@@ -43,10 +43,10 @@ function action(data) {
 	});
 
 	var res = defs(nejs.compile(data), {
-		"environments": ["node", "browser"],
-		"disallowVars": false,
-		"disallowDuplicated": false,
-		"disallowUnknownReferences": false
+		'environments': ['node', 'browser'],
+		'disallowVars': false,
+		'disallowDuplicated': false,
+		'disallowUnknownReferences': false
 	});
 
 	if (res.errors) {
