@@ -8,7 +8,7 @@ ECMAScript 6 to ECMAScript 3 compiler
 
 ```bash
 npm install -g nejs
-nejs <source>
+nejs [options] [dir|file ...]
 ```
 
 ## Synopsis
