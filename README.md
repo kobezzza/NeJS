@@ -2,9 +2,7 @@
 
 ECMAScript 6 to ECMAScript 3 compiler
 
-## Deprecated
-
-Use [es6-transpiler](https://github.com/termi/es6-transpiler)
+## Deprecated. Use [es6-transpiler](https://github.com/termi/es6-transpiler)
 
 ## Usage
 
