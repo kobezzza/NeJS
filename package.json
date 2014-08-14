@@ -23,7 +23,9 @@
     "url": "https://github.com/kobezzza/NeJS"
   },
   "keywords": [
-    "ecmascript6"
+    "ecmascript6",
+    "translator",
+    "javascript"
   ],
   "author": "Kobezzza <kobezzza@mail.ru> (https://github.com/Kobezzza)",
   "license": "MIT",
