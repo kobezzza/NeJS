@@ -1,73 +1,98 @@
 #!/usr/bin/env node --harmony
 
-var NeJS = require('./nejs');
-var Program = require('commander');
+var nejs = require('./nejs');
 
-Program
-	.version(NeJS.VERSION.join('.'))
-	.option('-s, --source [src]', 'source file')
-	.option('-o, --output [src]', 'output file')
-	.option('-c, --smart', 'smart compile')
-	.parse(process.argv);
-
-var input;
-
-if (!Program.source) {
-	input = process.argv[2];
-}
-
-if (!input && !Program.source) {
-	Program.help();
-}
-
-var fs = require('fs');
-var path = require('path');
-
-var text = Program.source ? String(fs.readFileSync(Program.source)) : input;
-
-var file = Program.source;
-var newFile = Program.output || (file ? file + '.js' : '');
+var program = require('commander');
 var defs = require('defs');
 
-if (Program.source && (!Program.output || Program.output === file) && Program.smart && path.extname(file) === '.js') {
-	console.error('Invalid output src!');
-	process.exit(-1);
+var path = require('path');
+var fs = require('fs'),
+	exists = fs.existsSync || path.existsSync;
+
+program
+	.version(nejs.VERSION.join('.'))
+
+	.option('-s, --source [src]', 'source file')
+	.option('-o, --output [src]', 'output file')
+
+	.parse(process.argv);
+
+var args = program['args'],
+	input;
+
+var file = program['source'],
+	newFile = program['output'];
+
+if (!file && args.length) {
+	input = args.join(' ');
+
+	if (exists(input)) {
+		file = input;
+		input = false;
+	}
 }
 
-var ShaBang = '';
-text = text.replace(/^(#!\/.*\s+)/, function (sstr, $1) {
-	ShaBang = $1;
-	return '';
-});
+function action(data) {
+	var toConsole = input && !program['output'] ||
+		!newFile;
 
-var res = defs(NeJS.compile(text), {
-	"environments": ["node", "browser"],
-	"disallowVars": false,
-	"disallowDuplicated": false,
-	"disallowUnknownReferences": false
-});
+	var ShaBang = '';
+	data = data.replace(/^(#!\/.*\s+)/, function (sstr, $1) {
+		ShaBang = $1;
+		return '';
+	});
 
-if (res.errors) {
-	console.error(res.errors.join("\n"));
-	console.error("\n");
-	process.exit(-1);
+	var res = defs(nejs.compile(data), {
+		"environments": ["node", "browser"],
+		"disallowVars": false,
+		"disallowDuplicated": false,
+		"disallowUnknownReferences": false
+	});
+
+	if (res.errors) {
+		console.error(res.errors.join('\n'));
+		console.error('\n');
+		process.exit(1);
+	}
+
+	if (res.ast) {
+		console.log(JSON.stringify(res.ast, null, 4));
+	}
+
+	res.src = ShaBang + res.src;
+
+	if (toConsole) {
+		console.log(res.src);
+
+	} else {
+		fs.writeFileSync(newFile, res.src);
+		console.log('File "' + file + '" has been successfully compiled (' + newFile + ').');
+	}
+
+	process.exit(0);
 }
 
-if (res.ast) {
-	console.log(JSON.stringify(res.ast, null, 4));
-}
+if (!file && input == null) {
+	var buf = '';
+	var stdin = process.stdin,
+		stdout = process.stdout;
 
-res.src = ShaBang + res.src;
-if (newFile) {
-	fs.writeFile(newFile, res.src, function (err) {
-		if (err) {
-			console.log(err);
+	stdin.setEncoding('utf8');
+	stdin.on('data', function (chunk) {
+		buf += chunk;
+	});
 
-		} else {
-			console.log('File "' + file + '" has been successfully compiled (' + newFile + ').');
-		}
+	stdin.on('end', function () {
+		action(buf);
+	}).resume();
+
+	process.on('SIGINT', function () {
+		stdout.write('\n');
+		stdin.emit('end');
+		stdout.write('\n');
+		process.exit();
 	});
 
 } else {
-	console.log(res.src);
+	action(file ? fs.readFileSync(file).toString() : input);
 }
