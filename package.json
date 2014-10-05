@@ -1,6 +1,6 @@
 {
   "name": "nejs",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "ECMAScript 6 to ECMAScript 3 compiler",
   "main": "nejs.js",
   "bin": {
