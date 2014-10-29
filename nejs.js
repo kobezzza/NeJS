@@ -3,12 +3,12 @@
  */
 
 var NeJS = {
-	VERSION: [0, 1, 15],
+	VERSION: [0, 1, 16],
 	quotContent: []
 };
 
-var compiler = require('./lib/compiler');
-var escaper = require('escaper');
+var compiler = require('./lib/compiler'),
+	escaper = require('escaper');
 
 NeJS.compile = compiler.compile;
 NeJS.escaper = escaper;

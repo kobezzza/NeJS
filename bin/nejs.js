@@ -1,13 +1,10 @@
 #!/usr/bin/env node --harmony
 
-var nejs = require('./nejs');
+var nejs = require('../nejs'),
+	fs = require('fs');
 
-var program = require('commander');
-var defs = require('defs');
-
-var path = require('path');
-var fs = require('fs'),
-	exists = fs.existsSync || path.existsSync;
+var program = require('commander'),
+	defs = require('defs');
 
 program
 	.version(nejs.VERSION.join('.'))
@@ -27,7 +24,7 @@ var file = program['source'],
 if (!file && args.length) {
 	input = args.join(' ');
 
-	if (exists(input)) {
+	if (fs.existsSync(input)) {
 		file = input;
 		input = false;
 	}

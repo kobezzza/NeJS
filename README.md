@@ -13,8 +13,8 @@ nejs [options] [dir|file ...]
 
 ## Synopsis
 
-* let, const delclaration ([defs.js](https://github.com/olov/defs))
-* arrow functions
+* let, const delclaration ([defs.js](https://github.com/olov/defs));
+* arrow functions.
 
 Examples:
 
