@@ -2,8 +2,7 @@
 
 ECMAScript 6 to ECMAScript 3 compiler
 
-## Deprecated. Use [es6-transpiler](https://github.com/termi/es6-transpiler)
-
+## Deprecated. Use [6to5](https://github.com/6to5/6to5)
 ## Usage
 
 ```bash
@@ -16,7 +15,7 @@ nejs [options] [dir|file ...]
 * let, const delclaration ([defs.js](https://github.com/olov/defs));
 * arrow functions.
 
-Examples:
+**Examples:**
 
 ```js
 () => ...
@@ -29,7 +28,7 @@ param => ...
 
 * rest parameters
 
-Examples:
+**Examples:**
 
 ```js
 function foo(a, b, ...other) {
@@ -39,7 +38,7 @@ function foo(a, b, ...other) {
 
 * default parameters
 
-Examples:
+**Examples:**
 
 ```js
 function foo(a, b = 1) {
@@ -49,7 +48,7 @@ function foo(a, b = 1) {
 
 * named parameters
 
-Examples:
+**Examples:**
 
 ```js
 function foo({name, body: lastName}) {
@@ -60,25 +59,6 @@ function foo({name, body: lastName}) {
 foo({name: 'Foo', body: 'Bar'});
 ```
 
-## License
+## [License](https://github.com/kobezzza/NeJS/blob/master/LICENSE)
 
-The MIT License (MIT)
-
-Copyright (c) 2014 Andrey Kobets (Kobezzza) <kobezzza@mail.ru>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+The MIT License.

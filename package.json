@@ -1,12 +1,12 @@
 {
   "name": "nejs",
   "description": "ECMAScript 6 to ECMAScript 3 transpiler.",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "homepage": "https://github.com/kobezzza/NeJS",
   "author": {
-    "name": "Kobezzza",
+    "name": "kobezzza",
     "email": "kobezzza@mail.ru",
-    "url": "https://github.com/kobezzza/"
+    "url": "https://github.com/kobezzza"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,8 @@
   },
   "devDependencies": {
     "gulp": "^3.8.9",
-    "gulp-bump": "^0.1.11"
+    "gulp-bump": "^0.1.11",
+    "gulp-eol": "^0.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"

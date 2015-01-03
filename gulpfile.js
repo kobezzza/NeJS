@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-	bump = require('gulp-bump');
+	bump = require('gulp-bump'),
+	eol = require('gulp-eol');
 
 gulp.task('bump', function () {
 	delete require.cache[require.resolve('./nejs')];
@@ -7,6 +8,7 @@ gulp.task('bump', function () {
 
 	gulp.src('./*.json')
 		.pipe(bump({version: v}))
+		.pipe(eol())
 		.pipe(gulp.dest('./'));
 });
 
