@@ -1,13 +1,14 @@
 /*!
- * Исключительно кривой транслятор ECMAScript6 в ECMAScript3
+ * Real bad transpiler ES6 to ES5
  */
 
 var NeJS = {
-	VERSION: [0, 1, 17],
+	VERSION: [0, 1, 18],
 	quotContent: []
 };
 
-var compiler = require('./lib/compiler'),
+var
+	compiler = require('./lib/compiler'),
 	escaper = require('escaper');
 
 NeJS.compile = compiler.compile;

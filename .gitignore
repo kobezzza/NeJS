@@ -9,7 +9,7 @@ ehthumbs.db
 Desktop.ini
 
 # Recycle Bin used on file shares
-$RECYCLE.BIN/
+$RECYCLE.BIN
 
 # Windows Installer files
 *.cab
@@ -37,14 +37,17 @@ Icon
 .Trashes
 
 # Dependencies
-bower_components/
-node_modules/
+bower_components
+node_modules
 
 # Build && test
-tmp/
-build/
-coverage/
+deploy
+coverage
 
 # Log
-npm-debug.log
+*.log
 error.txt
+
+# Temporary
+*.tmp
+tmp

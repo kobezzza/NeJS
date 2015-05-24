@@ -1,4 +1,5 @@
-var gulp = require('gulp'),
+var
+	gulp = require('gulp'),
 	bump = require('gulp-bump'),
 	eol = require('gulp-eol');
 

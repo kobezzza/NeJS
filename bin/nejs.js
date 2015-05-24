@@ -10,8 +10,8 @@ program
 	.version(nejs.VERSION.join('.'))
 	.usage('[options] [dir|file ...]')
 
-	.option('-s, --source [src]', 'source file')
-	.option('-o, --output [src]', 'output file')
+	.option('-s, --source [src]')
+	.option('-o, --output [src]')
 
 	.parse(process.argv);
 
@@ -64,7 +64,7 @@ function action(data) {
 
 	} else {
 		fs.writeFileSync(newFile, res.src);
-		console.log('File "' + file + '" has been successfully compiled (' + newFile + ').');
+		console.log('File "' + file + '" was successfully compiled -> "' + newFile + '"');
 	}
 
 	process.exit(0);

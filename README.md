@@ -1,8 +1,9 @@
-# NeJS
+NeJS
+====
 
 ECMAScript 6 to ECMAScript 3 compiler
 
-## Deprecated. Use [6to5](https://github.com/6to5/6to5)
+## Deprecated. Use [Babel](https://github.com/babel/babel)
 ## Usage
 
 ```bash
@@ -21,8 +22,8 @@ nejs [options] [dir|file ...]
 () => ...
 param => ...
 (param1, param2) => {
-	...
-	return ...
+  ...
+  return ...
 }
 ```
 
@@ -32,7 +33,7 @@ param => ...
 
 ```js
 function foo(a, b, ...other) {
-	...
+  ...
 }
 ```
 
@@ -42,7 +43,7 @@ function foo(a, b, ...other) {
 
 ```js
 function foo(a, b = 1) {
-	...
+  ...
 }
 ```
 
@@ -52,8 +53,8 @@ function foo(a, b = 1) {
 
 ```js
 function foo({name, body: lastName}) {
-	console.log(name);
-	console.log(lastName);
+  console.log(name);
+  console.log(lastName);
 }
 
 foo({name: 'Foo', body: 'Bar'});

@@ -1,7 +1,7 @@
 {
   "name": "nejs",
   "description": "ECMAScript 6 to ECMAScript 3 transpiler.",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "homepage": "https://github.com/kobezzza/NeJS",
   "author": {
     "name": "kobezzza",
@@ -15,12 +15,7 @@
   "bugs": {
     "url": "https://github.com/kobezzza/NeJS/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/kobezzza/NeJS/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "main": "nejs.js",
   "bin": {
     "nejs": "bin/nejs.js"
@@ -39,7 +34,8 @@
     "gulp-eol": "^0.1.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "install": "echo \"Deprecated. Use Babel: https://github.com/babel/babel\""
   },
   "keywords": [
     "ecmascript6",
