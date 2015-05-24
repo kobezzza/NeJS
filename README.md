@@ -1,7 +1,7 @@
 NeJS
 ====
 
-ECMAScript 6 to ECMAScript 3 compiler
+ECMAScript 6 to ECMAScript 3 compiler.
 
 ## Deprecated. Use [Babel](https://github.com/babel/babel)
 ## Usage
