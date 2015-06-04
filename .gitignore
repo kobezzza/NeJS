@@ -39,15 +39,3 @@ Icon
 # Dependencies
 bower_components
 node_modules
-
-# Build && test
-deploy
-coverage
-
-# Log
-*.log
-error.txt
-
-# Temporary
-*.tmp
-tmp

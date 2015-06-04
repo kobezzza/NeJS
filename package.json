@@ -1,8 +1,10 @@
 {
   "name": "nejs",
   "description": "ECMAScript 6 to ECMAScript 3 transpiler.",
-  "version": "0.1.18",
   "homepage": "https://github.com/kobezzza/NeJS",
+  "main": "nejs.js",
+  "version": "0.1.19",
+  "license": "MIT",
   "author": {
     "name": "kobezzza",
     "email": "kobezzza@mail.ru",
@@ -15,8 +17,6 @@
   "bugs": {
     "url": "https://github.com/kobezzza/NeJS/issues"
   },
-  "license": "MIT",
-  "main": "nejs.js",
   "bin": {
     "nejs": "bin/nejs.js"
   },
@@ -30,8 +30,7 @@
   },
   "devDependencies": {
     "gulp": "^3.8.9",
-    "gulp-bump": "^0.1.11",
-    "gulp-eol": "^0.1.1"
+    "gulp-bump": "^0.1.11"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
